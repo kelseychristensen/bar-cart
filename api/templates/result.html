@@ -1,0 +1,45 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+{% include "header.html" %}
+<body>
+
+    <div class="title_container">
+    <h1>Bar Cart</h1>
+
+<div class="result-container">
+    <div class="inner-container">
+<h2>{{drink[0]}}</h2>
+
+<div class="row">
+
+        <div id="returned_ingredients" class="col-6">
+        {% for item in drink[1] %}
+            {% if item[0]  == None or item[1] == None %}
+                    <p></p>
+                {% else %}
+                    <p class="item">{{ item[0] }} {{item[1]}}</p>
+                {% endif %}
+
+        {% endfor %}
+
+                </div>
+
+        <div class="col-6">
+
+                <p>{{drink[2]}}</p>
+
+                </div>
+
+</div></div></div>
+</div>
+
+<div class="outer_for_shaker">
+   <div class="inner_for_shaker">
+      <a href="{{ url_for('home') }}"><img class="shaker" src="{{ url_for('static', filename='images/shaker.png') }}"></a>
+   </div>
+</div>
+
+
+{% include "footer.html" %}
+{% endblock %}

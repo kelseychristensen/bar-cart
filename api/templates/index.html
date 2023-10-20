@@ -1,0 +1,37 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+{% include "header.html" %}
+
+<body>
+
+    <div class="title_container">
+    <h1>Bar Cart</h1>
+
+
+<div class="container">
+    <div class="inner-container">
+
+<div class="row">
+
+    <div class="col-4">
+        <a href="{{ url_for('random') }}"><img data-toggle="tooltip" data-placement="left" title="Generate a random cocktail" class="idx_image" src="{{ url_for('static', filename='images/random.png') }}"></a>
+    </div>
+
+    <div class="col-4">
+        <a href="{{ url_for('spirits') }}"><img data-toggle="tooltip" data-placement="left" title="Generate a random cocktail with your favorite spirit" class="idx_image" src="{{ url_for('static', filename='images/search_by_spirit.png') }}"></a>
+    </div>
+
+    <div class="col-4">
+        <a href="{{ url_for('search') }}"><img data-toggle="tooltip" data-placement="left" title="Search cocktails by ingredients you have" class="idx_image" src="{{ url_for('static', filename='images/search_your_bar.png') }}"></a>
+    </div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
+{% include "footer.html" %}
+{% endblock %}

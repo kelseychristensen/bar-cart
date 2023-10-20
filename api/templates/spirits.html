@@ -1,0 +1,55 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block content %}
+{% include "header.html" %}
+
+<body>
+
+    <div class="title_container">
+    <h1>Bar Cart</h1>
+
+
+<div class="container">
+    <div class="inner-container-unpadded">
+
+<div class="row">
+
+    <div class="col-1">
+    </div>
+
+    <div class="col-2">
+        <a href="{{ url_for('by_spirit', spirit='gin' ) }}"><img class="spirit" src="{{ url_for('static', filename='images/spirits/gin_icon.png') }}"></a>
+    </div>
+
+    <div class="col-2">
+        <a href="{{ url_for('by_spirit', spirit='rum' ) }}"><img class="spirit" src="{{ url_for('static', filename='images/spirits/rum_icon.png') }}"></a>    </div>
+
+    <div class="col-2">
+        <a href="{{ url_for('by_spirit', spirit='tequila' ) }}"><img class="spirit" src="{{ url_for('static', filename='images/spirits/tequila_icon.png') }}"></a>    </div>
+
+        <div class="col-2">
+        <a href="{{ url_for('by_spirit', spirit='vodka' ) }}"><img class="spirit" src="{{ url_for('static', filename='images/spirits/vodka_icon.png') }}"></a>    </div>
+
+    <div class="col-2">
+        <a href="{{ url_for('by_spirit', spirit='whiskey' ) }}"><img class="spirit" src="{{ url_for('static', filename='images/spirits/whiskey_icon.png') }}"></a>    </div>
+
+    <div class="col-1">
+    </div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="outer_for_shaker">
+   <div class="inner_for_shaker">
+      <a href="{{ url_for('home') }}"><img class="shaker" src="{{ url_for('static', filename='images/shaker.png') }}"></a>
+   </div>
+</div>
+
+
+</body>
+
+{% include "footer.html" %}
+{% endblock %}
